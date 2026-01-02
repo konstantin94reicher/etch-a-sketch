@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2px;
+  width: 500px;
+  aspect-ratio: 1/1;
+}
+
+.row,
+.column {
+  border: 1px solid black;
+  flex: 1; 
+}
+
+.row {
+    display: flex;
+    gap: 2px;
+    justify-content: space-evenly;
+}
