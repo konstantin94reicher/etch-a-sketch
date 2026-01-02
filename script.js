@@ -40,8 +40,8 @@ Adding a new class to the div.
 Changing the div’s background color using JavaScript.
 */
 
-const rows = document.querySelectorAll(".row");
-const columns = document.querySelectorAll(".column");
+// const rows = document.querySelectorAll(".row");
+// const columns = document.querySelectorAll(".column");
 
 // rows.forEach((row) => {
 //   row.addEventListener("mouseover", () => {
@@ -49,10 +49,16 @@ const columns = document.querySelectorAll(".column");
 //   });
 // });
 
-columns.forEach((column) => {
-  column.addEventListener("mouseover", () => {
-    column.classList.add("hovered");
-  });
+// columns.forEach((column) => {
+//   column.addEventListener("mouseover", () => {
+//     column.classList.add("hovered");
+//   });
+// });
+
+cont.addEventListener("mouseover", (e) => {
+  if (e.target.classList.contains("column")) {
+    e.target.classList.add("hovered");
+  }
 });
 
 /* 
@@ -72,13 +78,16 @@ changing the total amount of pixels used.
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
-  columns.forEach((column) => {
-    column.remove();
-  });
-  rows.forEach((row) => {
-    row.remove();
-  });
+  //   columns.forEach((column) => {
+  //     column.remove();
+  //   });
+  //   rows.forEach((row) => {
+  //     row.remove();
+  //   }); // nicht dynamisch, alte NodeList wird enfernt
 
-  const newGridSize = prompt("Enter a number between 1 and 100", 16);
+  let newGridSize = prompt("Enter a number between 1 and 100", 16);
+  newGridSize = Math.min(100, Math.max(1, newGridSize));
+
+  cont.innerHTML = "";
   setBasicGrid(newGridSize);
 });
