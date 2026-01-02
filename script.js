@@ -35,16 +35,14 @@ columns.forEach((column) => {
     column.classList.add("hovered");
   });
 });
+-> code worked, but just one time - didn't work dynamically 
+*/
 
 cont.addEventListener("mouseover", (e) => {
   if (e.target.classList.contains("column")) {
     e.target.classList.add("hovered");
   }
 });
-
--> code worked, but just one time - didn't work dynamically 
-
-*/
 
 const btn = document.querySelector("button");
 
