@@ -1,20 +1,51 @@
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+button {
+  height: 50px;
+  min-width: 150px;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 0;
+  background-color: rgb(78, 0, 78);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(255, 188, 255);
+  color: black;
+}
+
 .container {
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   gap: 2px;
-  width: 500px;
+  width: 750px;
   aspect-ratio: 1/1;
 }
 
 .row,
 .column {
   border: 1px solid black;
-  flex: 1; 
+  flex: 1;
 }
 
 .row {
-    display: flex;
-    gap: 2px;
-    justify-content: space-evenly;
+  display: flex;
+  gap: 2px;
+  justify-content: space-evenly;
+}
+
+.hovered {
+  background-color: black;
 }
