@@ -40,26 +40,31 @@ Adding a new class to the div.
 Changing the div’s background color using JavaScript.
 */
 
-// const rows = document.querySelectorAll(".row");
-// const columns = document.querySelectorAll(".column");
+/*
+const rows = document.querySelectorAll(".row");
+const columns = document.querySelectorAll(".column"); 
 
-// rows.forEach((row) => {
-//   row.addEventListener("mouseover", () => {
-//     row.classList.add("hovered");
-//   });
-// });
+rows.forEach((row) => {
+  row.addEventListener("mouseover", () => {
+    row.classList.add("hovered");
+  });
+});
 
-// columns.forEach((column) => {
-//   column.addEventListener("mouseover", () => {
-//     column.classList.add("hovered");
-//   });
-// });
+columns.forEach((column) => {
+  column.addEventListener("mouseover", () => {
+    column.classList.add("hovered");
+  });
+});
 
 cont.addEventListener("mouseover", (e) => {
   if (e.target.classList.contains("column")) {
     e.target.classList.add("hovered");
   }
 });
+
+-> code worked, but just one time - didn't work dynamically 
+
+*/
 
 /* 
 3. Add a button on the top of the screen that will send the user a popup asking for the 
@@ -83,7 +88,7 @@ btn.addEventListener("click", () => {
   //   });
   //   rows.forEach((row) => {
   //     row.remove();
-  //   }); // nicht dynamisch, alte NodeList wird enfernt
+  //   }); // doesn't work dynamically, old NodeList is being removed
 
   let newGridSize = prompt("Enter a number between 1 and 100", 16);
   newGridSize = Math.min(100, Math.max(1, newGridSize));
